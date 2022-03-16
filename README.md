@@ -18,6 +18,7 @@
 * [Generate](#generate)
   * [Generate user](#generate-user)
   * [Generate group](#generate-group)
+  * [Generate post](#generate-post)
 
 
 ## Introduction
@@ -276,3 +277,9 @@ Run: `generators/group.sh`
 
 Make adjustments as in the section above.
 
+
+### Generate post
+
+Run: `generators/post.sh`
+
+Make adjustments as in the section above.
