@@ -64,7 +64,7 @@ mix phx.server
 ```
 
 
-### Use git (optional)
+### Use git
 
 Create a git repo.
 
@@ -77,7 +77,7 @@ git commit -am "Run mix phx.new demo_app"
 ```
 
 
-### Use GitHub (optional)
+### Use GitHub
 
 Create a GitHub repo. 
 
@@ -117,6 +117,7 @@ Run:
 ```sh
 git commit -m "Add gitignore rules for dot files and env files" .gitignore 
 ```
+
 
 ## Enable binary id
 
