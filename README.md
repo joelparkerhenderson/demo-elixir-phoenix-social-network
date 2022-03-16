@@ -9,6 +9,7 @@
 * [Enable binary id](#enable-binary-id)
   * [Configure schema with binary id](#configure-schema-with-binary-id)
   * [Configure migration primary key](#configure-migration-primary-key)
+* [Add authentication](#add-authentication)
 
 
 ## Introduction
@@ -154,3 +155,9 @@ config :demo_app, Social.Repo,
 mix test && git add --all && git commit -am "Add migration primary key"
 ```
 
+
+## Add authentication
+
+See [doc/authentication-via-phx.md](doc/authentication-via-phx.md)
+
+See [doc/authentication-via-pow.md](doc/authentication-via-pow.md)
