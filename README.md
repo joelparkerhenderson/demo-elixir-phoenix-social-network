@@ -14,6 +14,7 @@
 * [Add static files](#add-static-files)
   * [Enable static files](#enable-static-files)
   * [Create a content delivery area](#create-a-content-delivery-area)
+* [Add dependencies](#add-dependencies)
 
 
 ## Introduction
@@ -193,5 +194,33 @@ plug Plug.Static,
   from: :demo,
   gzip: false,
   only: ~w(cdn css fonts images js favicon.ico robots.txt)
+```
+
+
+## Add dependencies
+
+
+Add dependencies that we expect to use:
+
+```elixir
+# ExMachina makes it easy to create test data and associations. 
+# https://github.com/thoughtbot/ex_machina
+{:ex_machina, "~> 2.4"},
+
+# Bamboo provides email integration capabilties.
+# https://github.com/thoughtbot/bamboo
+{:bamboo, "~> 1.6"},
+
+# Brady provides helper functions for use within Phoenix templates.
+# https://github.com/thoughtbot/brady
+{:brady, "~> 0.0.9"},
+
+# Formulator is a library for Phoenix forms.
+# https://github.com/thoughtbot/formulator
+{:formulator, "~> 0.2.0"},
+
+# Guardian authentication library for use with Elixir applications.
+# https://github.com/ueberauth/guardian
+{:guardian, "~> 2.0"},
 ```
 
