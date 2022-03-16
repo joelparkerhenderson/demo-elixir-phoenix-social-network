@@ -6,6 +6,9 @@
   * [Use git](#use-git)
   * [Use GitHub](#use-github)
   * [Add gitignore rules](#add-gitignore-rules)
+* [Enable binary id](#enable-binary-id)
+  * [Configure schema with binary id](#configure-schema-with-binary-id)
+  * [Configure migration primary key](#configure-migration-primary-key)
 
 
 ## Introduction
@@ -104,3 +107,50 @@ Run:
 ```sh
 git commit -m "Add gitignore rules for dot files and env files" .gitignore 
 ```
+
+## Enable binary id
+
+
+### Configure schema with binary id
+
+We prefer our database primary keys to use binary id values.
+
+We created our app with binary id values as the default. If we hadn't created our app that way, and instead we wanted to add binary id values later on, here's a way to do it.
+
+See:
+
+* https://hexdocs.pm/ecto/Ecto.Schema.html#module-schema-attributes
+
+Create file `lib/demo_app/schema.ex`:
+
+```ex
+defmodule Social.Schema do
+  defmacro __using__(_) do
+    quote do
+      use Ecto.Schema
+      @primary_key {:id, :binary_id, autogenerate: true}
+      @foreign_key_type :binary_id
+    end
+  end
+end
+```
+
+```sh
+mix test && git add --all && git commit -am "Add schema with binary id"
+```
+
+
+### Configure migration primary key
+
+Edit `config/{dev,test}.exs` and add `migration_primary_key` such as:
+
+```
+config :demo_app, Social.Repo,
+  ...
+  migration_primary_key: [name: :id, type: :binary_id]
+```
+
+```sh
+mix test && git add --all && git commit -am "Add migration primary key"
+```
+
