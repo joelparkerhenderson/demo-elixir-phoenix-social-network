@@ -15,6 +15,8 @@
   * [Enable static files](#enable-static-files)
   * [Create a content delivery area](#create-a-content-delivery-area)
 * [Add dependencies](#add-dependencies)
+* [Generate](#generate)
+  * [Generate user](#generate-user)
 
 
 ## Introduction
@@ -222,5 +224,47 @@ Add dependencies that we expect to use:
 # Guardian authentication library for use with Elixir applications.
 # https://github.com/ueberauth/guardian
 {:guardian, "~> 2.0"},
+```
+
+
+## Generate
+
+
+### Generate user
+
+Run: `generators/user.sh`
+
+
+Edit `lib/demo_app_web/templates/profile/index.html.eex` and delete:
+
+```eex
+<th>Json</th>
+```
+
+```eex
+<td><%= profile.json %></td>
+```
+
+Edit `lib/demo_app_web/templates/profile/show.html.eex` and delete:
+
+```eex
+<li>
+  <strong>Json:</strong>
+  <%= @user.json %>
+</li>
+```
+
+Edit `lib/demo_app_web/templates/profile/form.html.eex` and delete:
+
+```eex
+<%= label f, :json %>
+<%= text_input f, :json %>
+<%= error_tag f, :json %>
+```
+
+Test:
+
+```
+mix test
 ```
 

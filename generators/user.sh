@@ -1,0 +1,39 @@
+mix phx.gen.html --binary-id \
+  Users User Users \
+    type_id:string \
+    state_id:string \
+    user_id:references:users \
+    handle:unique \
+    email:unique \
+    phone:unique \
+    password_hash:string \
+    verified_flag:boolean \
+    street:string \
+    premise:string \
+    locality:string \
+    province:string \
+    postcode:string \
+    country:string \
+    title:string \
+    subtitle:string \
+    summary:text \
+    saga:text \
+    image_uri:string \
+    website_uri:string \
+    facebook_uri:string \
+    instagram_uri:string \
+    linkedin_uri:string \
+    medium_uri:string \
+    pinterest_uri:string \
+    soundcloud_uri:string \
+    tiktok_uri:string \
+    twitter_uri:string \
+    wikipedia_uri:string \
+    youtube_uri:string \
+    consent_to_email:boolean \
+    consent_to_sms:boolean \
+    claim_criminal_record:boolean \
+    incarceration_start_date:utc_datetime_usec \
+    incarceration_stop_date:utc_datetime_usec \
+    hubspot_key:string \
+    removed_at:utc_datetime_usec
