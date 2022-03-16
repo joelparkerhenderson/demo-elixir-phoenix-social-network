@@ -13,6 +13,7 @@
 * [Add fonts](#add-fonts)
 * [Add static files](#add-static-files)
   * [Enable static files](#enable-static-files)
+  * [Create a content delivery area](#create-a-content-delivery-area)
 
 
 ## Introduction
@@ -180,5 +181,17 @@ Edit `.gitignore` and comment out `/priv/static/`.
 
 ```sh
 git add --all && git commit -am "Add static files"
+```
+
+### Create a content delivery area
+
+Edit `lib/demo_web/endpoint.ex` and add `cdn`:
+
+```
+plug Plug.Static,
+  at: "/",
+  from: :demo,
+  gzip: false,
+  only: ~w(cdn css fonts images js favicon.ico robots.txt)
 ```
 
