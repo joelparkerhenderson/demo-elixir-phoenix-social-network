@@ -17,6 +17,7 @@
 * [Add dependencies](#add-dependencies)
 * [Generate](#generate)
   * [Generate user](#generate-user)
+  * [Generate group](#generate-group)
 
 
 ## Introduction
@@ -267,4 +268,11 @@ Test:
 ```
 mix test
 ```
+
+
+### Generate group
+
+Run: `generators/group.sh`
+
+Make adjustments as in the section above.
 
