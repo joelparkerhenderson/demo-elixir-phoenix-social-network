@@ -5,6 +5,7 @@
   * [Try the server](#try-the-server)
   * [Use git](#use-git)
   * [Use GitHub](#use-github)
+  * [Add gitignore rules](#add-gitignore-rules)
 
 
 ## Introduction
@@ -76,3 +77,30 @@ git push -u origin main
 ```
 
 
+### Add gitignore rules
+
+Edit `.gitignore` and add these:
+
+```gitignore
+# Dot files: ignore all, then accept specific files and patterns.
+.*
+!.gitignore
+!.*.gitignore
+!.*[-_.]example
+!.*[-_.]example[-_.]*
+!.*.gpg
+
+# Env files: ignore all, then accept specific files and patterns.
+env
+env[-_.]*
+!env[-_.]example
+!env[-_.]example[-_.]*
+!env[-_.]gpg
+!env[-_.]*.gpg
+```
+
+Run:
+
+```sh
+git commit -m "Add gitignore rules for dot files and env files" .gitignore 
+```

@@ -1,0 +1,15 @@
+# Dot files: ignore all, then accept specific files and patterns.
+.*
+!.gitignore
+!.*.gitignore
+!.*[-_.]example
+!.*[-_.]example[-_.]*
+!.*.gpg
+
+# Env files: ignore all, then accept specific files and patterns.
+env
+env[-_.]*
+!env[-_.]example
+!env[-_.]example[-_.]*
+!env[-_.]gpg
+!env[-_.]*.gpg
