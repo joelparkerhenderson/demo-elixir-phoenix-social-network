@@ -4,6 +4,7 @@
   * [Create an app](#create-an-app)
   * [Try the server](#try-the-server)
   * [Use git](#use-git)
+  * [Use GitHub](#use-github)
 
 
 ## Introduction
@@ -60,4 +61,18 @@ git init --initial-branch=main
 git add --all
 git commit -am "Run mix phx.new demo_app"
 ```
+
+
+### Use GitHub (optional)
+
+Create a GitHub repo. 
+
+If you're using GitHub, GitLab, or any similar service, then use your own username and your choice of repository name.
+
+```sh
+git remote add origin git@github.com:joelparkerhenderson/demo-elixir-phoenix-social-network.git
+git branch -M main
+git push -u origin main
+```
+
 
