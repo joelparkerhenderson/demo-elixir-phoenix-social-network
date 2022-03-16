@@ -10,6 +10,7 @@
   * [Configure schema with binary id](#configure-schema-with-binary-id)
   * [Configure migration primary key](#configure-migration-primary-key)
 * [Add authentication](#add-authentication)
+* [Add fonts](#add-fonts)
 
 
 ## Introduction
@@ -161,3 +162,8 @@ mix test && git add --all && git commit -am "Add migration primary key"
 See [doc/authentication-via-phx.md](doc/authentication-via-phx.md)
 
 See [doc/authentication-via-pow.md](doc/authentication-via-pow.md)
+
+
+## Add fonts
+
+See [doc/fonts-via-webpack-and-scss.md](doc/fonts-via-webpack-and-scss.md)
