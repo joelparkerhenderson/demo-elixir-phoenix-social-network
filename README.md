@@ -11,6 +11,8 @@
   * [Configure migration primary key](#configure-migration-primary-key)
 * [Add authentication](#add-authentication)
 * [Add fonts](#add-fonts)
+* [Add static files](#add-static-files)
+  * [Enable static files](#enable-static-files)
 
 
 ## Introduction
@@ -167,3 +169,16 @@ See [doc/authentication-via-pow.md](doc/authentication-via-pow.md)
 ## Add fonts
 
 See [doc/fonts-via-webpack-and-scss.md](doc/fonts-via-webpack-and-scss.md)
+
+
+## Add static files
+
+
+### Enable static files
+
+Edit `.gitignore` and comment out `/priv/static/`.
+
+```sh
+git add --all && git commit -am "Add static files"
+```
+
