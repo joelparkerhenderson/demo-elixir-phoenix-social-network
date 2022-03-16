@@ -135,7 +135,7 @@ See:
 Create file `lib/demo_app/schema.ex`:
 
 ```ex
-defmodule Social.Schema do
+defmodule Demo.Schema do
   defmacro __using__(_) do
     quote do
       use Ecto.Schema
@@ -156,7 +156,7 @@ mix test && git add --all && git commit -am "Add schema with binary id"
 Edit `config/{dev,test}.exs` and add `migration_primary_key` such as:
 
 ```
-config :demo_app, Social.Repo,
+config :demo_app, Demo.Repo,
   ...
   migration_primary_key: [name: :id, type: :binary_id]
 ```
