@@ -20,6 +20,7 @@
   * [Generate group](#generate-group)
   * [Generate post](#generate-post)
 * [Add user acceptance testing](#add-user-acceptance-testing)
+* [Add app hosting via Gigalixir](#add-app-hosting-via-gigalixir)
 
 
 ## Introduction
@@ -292,3 +293,8 @@ Make adjustments as in the section above.
 We use Wallaby. Other choices we considered: Hound, Cypress.
 
 https://hashrocket.com/blog/posts/integration-testing-phoenix-with-wallaby
+
+
+## Add app hosting with Gigalixir
+
+See <doc/app-hosting-with-gigalixir.md>
