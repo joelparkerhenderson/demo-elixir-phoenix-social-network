@@ -22,6 +22,7 @@
 * [Add user acceptance testing](#add-user-acceptance-testing)
 * [Add app hosting via Gigalixir](#add-app-hosting-via-gigalixir)
 * [Add asset hosting via Cloudinary](#add-asset-hosting-via-cloudinary)
+* [Helpful links](#helpful-links)
 
 
 ## Introduction
@@ -304,3 +305,34 @@ See <doc/app-hosting-with-gigalixir.md>
 ## Add asset hosting via Cloudinary
 
 See <https://cloudinary.com/>
+
+
+## Helpful links
+
+https://github.com/dendronhq/dendron
+
+https://elixirforum.com/t/surface-a-component-based-library-for-phoenix-liveview/27671/4
+
+https://fullstackphoenix.com/tutorials/create-a-reusable-modal-with-liveview-component
+
+https://www.wyeworks.com/blog/2020/03/03/breaking-up-a-phoenix-live-view/
+
+https://newaperio.com/blog/updating-and-deleting-from-temporary-assigns-in-phoenix-live-view
+
+http://blog.plataformatec.com.br/2015/08/working-with-ecto-associations-and-embeds/
+
+http://blog.plataformatec.com.br/wp-content/uploads/2016/11/whats-new-in-ecto-2-0.pdf
+
+https://www.sitepoint.com/understanding-elixirs-ecto-querying-dsl-the-basics/
+
+https://www.sitepoint.com/elixirs-ecto-querying-dsl-beyond-the-basics/
+
+https://thoughtbot.com/blog/preloading-nested-associations-with-ecto
+
+http://blog.pthompson.org/alpine-js-and-liveview
+
+https://github.com/elixir-wallaby/wallaby/blob/45f69c5f4f8b809c6ddbebb373b8f4eb91a79659/integration_test/cases/browser/cookies_test.exs
+
+https://medium.com/hackernoon/mixology-exmachina-92a08dc3e954
+
+https://medium.com/@steven.cole.elliott/sorting-dates-in-elixir-59592a0c33a5
