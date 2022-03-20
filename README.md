@@ -19,6 +19,7 @@
   * [Generate user](#generate-user)
   * [Generate group](#generate-group)
   * [Generate post](#generate-post)
+* [Add user acceptance testing](#add-user-acceptance-testing)
 
 
 ## Introduction
@@ -284,3 +285,10 @@ Make adjustments as in the section above.
 Run: `generators/post.sh`
 
 Make adjustments as in the section above.
+
+
+## Add user acceptance testing
+
+We use Wallaby. Other choices we considered: Hound, Cypress.
+
+https://hashrocket.com/blog/posts/integration-testing-phoenix-with-wallaby
