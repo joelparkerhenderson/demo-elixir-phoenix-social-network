@@ -20,6 +20,7 @@
   * [Generate group](#generate-group)
   * [Generate post](#generate-post)
 * [Add user acceptance testing](#add-user-acceptance-testing)
+* [Testing](#testing)
 * [Add app hosting via Gigalixir](#add-app-hosting-via-gigalixir)
 * [Add asset hosting via Cloudinary](#add-asset-hosting-via-cloudinary)
 * [Helpful links](#helpful-links)
@@ -299,6 +300,16 @@ Make adjustments as in the section above.
 We use Wallaby. Other choices we considered: Hound, Cypress.
 
 https://hashrocket.com/blog/posts/integration-testing-phoenix-with-wallaby
+
+
+## Testing
+
+Test:
+
+```sh
+mix cmd --app demo mix test
+mix cmd --app demo_web mix test
+```
 
 
 ## Add app hosting with Gigalixir
