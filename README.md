@@ -21,6 +21,7 @@
   * [Generate post](#generate-post)
 * [Add user acceptance testing](#add-user-acceptance-testing)
 * [Add app hosting via Gigalixir](#add-app-hosting-via-gigalixir)
+* [Add asset hosting via Cloudinary](#add-asset-hosting-via-cloudinary)
 
 
 ## Introduction
@@ -298,3 +299,8 @@ https://hashrocket.com/blog/posts/integration-testing-phoenix-with-wallaby
 ## Add app hosting with Gigalixir
 
 See <doc/app-hosting-with-gigalixir.md>
+
+
+## Add asset hosting via Cloudinary
+
+See <https://cloudinary.com/>
