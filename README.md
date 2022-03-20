@@ -25,7 +25,7 @@
 * [Helpful links](#helpful-links)
 * [Maintenance]
   * [Run git garbage collection](#run-git-garbage-collection)
-
+  * [Reset the Gigalixir production database](#reset-the-production-database)
 
 ## Introduction
 
@@ -356,3 +356,17 @@ Advanced:
 ```sh
 git gc --aggressive --prune=now
 ```
+
+
+### Reset the production database
+
+Connect to Gigalixir:
+
+```sh
+gigalixir ps:remote_console
+```
+
+```iex
+Ecto.Migrator.run(Demo.Repo, Application.app_dir(:demo_app, "priv/repo/migrations"), :down, [all: true])
+```
+
