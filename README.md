@@ -393,9 +393,9 @@ To fix an accidental commit of large files, such as to delete all the directorie
 To fix via remote, not via local:
 
 ```sh
-git clone --mirror git@github.com:SixArm/commissary-ux.git
-java -jar bfg-1.13.0.jar --delete-folders images commissary-ux.git
-cd commissary-ux.git
+git clone --mirror git@github.com:joelparkerhenderson/demo-elixir-phoenix-social-network.git
+java -jar bfg-1.13.0.jar --delete-folders images demo-elixir-phoenix-social-network.git
+cd demo-elixir-phoenix-social-network.git
 git reflog expire --expire=now --all
 git gc --aggressive --prune=now
 git push
