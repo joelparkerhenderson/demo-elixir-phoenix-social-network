@@ -23,6 +23,8 @@
 * [Add app hosting via Gigalixir](#add-app-hosting-via-gigalixir)
 * [Add asset hosting via Cloudinary](#add-asset-hosting-via-cloudinary)
 * [Helpful links](#helpful-links)
+* [Maintenance]
+  * [Run git garbage collection](#run-git-garbage-collection)
 
 
 ## Introduction
@@ -336,3 +338,21 @@ https://github.com/elixir-wallaby/wallaby/blob/45f69c5f4f8b809c6ddbebb373b8f4eb9
 https://medium.com/hackernoon/mixology-exmachina-92a08dc3e954
 
 https://medium.com/@steven.cole.elliott/sorting-dates-in-elixir-59592a0c33a5
+
+
+## Maintenance
+
+
+### Run git garbage collection
+
+Typical:
+
+```sh
+git gc
+```
+
+Advanced:
+
+```sh
+git gc --aggressive --prune=now
+```
