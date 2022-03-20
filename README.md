@@ -24,8 +24,10 @@
 * [Add asset hosting via Cloudinary](#add-asset-hosting-via-cloudinary)
 * [Helpful links](#helpful-links)
 * [Maintenance]
-  * [Run git garbage collection](#run-git-garbage-collection)
   * [Reset the Gigalixir production database](#reset-the-production-database)
+  * [Run git garbage collection](#run-git-garbage-collection)
+  * [Delete files via git BFG](#delete-files-via-git-bfg)
+
 
 ## Introduction
 
@@ -343,6 +345,19 @@ https://medium.com/@steven.cole.elliott/sorting-dates-in-elixir-59592a0c33a5
 ## Maintenance
 
 
+### Reset the production database
+
+Connect to Gigalixir:
+
+```sh
+gigalixir ps:remote_console
+```
+
+```iex
+Ecto.Migrator.run(Demo.Repo, Application.app_dir(:demo_app, "priv/repo/migrations"), :down, [all: true])
+```
+
+
 ### Run git garbage collection
 
 Typical:
@@ -358,15 +373,30 @@ git gc --aggressive --prune=now
 ```
 
 
-### Reset the production database
+### Delete files via git BFG
 
-Connect to Gigalixir:
+To fix an accidental commit of large files, such as to delete all the directories named `images`, you can use the git tool "BFG".
+
+* https://rtyley.github.io/bfg-repo-cleaner/
+
+To fix via remote, not via local:
 
 ```sh
-gigalixir ps:remote_console
+git clone --mirror git@github.com:SixArm/commissary-ux.git
+java -jar bfg-1.13.0.jar --delete-folders images commissary-ux.git
+cd commissary-ux.git
+git reflog expire --expire=now --all
+git gc --aggressive --prune=now
+git push
 ```
 
-```iex
-Ecto.Migrator.run(Demo.Repo, Application.app_dir(:demo_app, "priv/repo/migrations"), :down, [all: true])
-```
+To fix via local, not remote, you must be in the directory above the repo:
 
+```sh
+git gc
+java -jar bfg-1.13.0.jar --delete-folders images demo_app
+cd demo_app
+git reflog expire --expire=now --all
+git gc --aggressive --prune=now
+git push -f
+```
